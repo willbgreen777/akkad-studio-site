@@ -84,7 +84,8 @@ def nav(depth=""):
 
 FOOTER = """<footer><div class="wrap">
   Akkad Studio — web &amp; digital design for small businesses in Northwest Arkansas.<br>
-  We work by email so everything you agree to is in writing. © 2026 Akkad Studio.
+  We work by email so everything you agree to is in writing. © 2026 Akkad Studio.<br>
+  <a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms</a>
 </div></footer>"""
 
 def page(c):
