@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Akkad Studio — We build the website your business should already have</title>
+<meta name="description" content="Type your business name and watch your website build itself. Then we make the real one — $500, live in about a week. Northwest Arkansas.">
+<link rel="canonical" href="https://akkadstudio.com/">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Type your business name. Watch your website build itself.">
+<meta property="og:description" content="Akkad Studio — websites for Northwest Arkansas small businesses. $500, about a week.">
+<meta property="og:url" content="https://akkadstudio.com/">
+<meta property="og:image" content="https://akkadstudio.com/social/og-1200x630.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Akkad Studio">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Type your business name. Watch your website build itself.">
+<meta name="twitter:description" content="Websites for Northwest Arkansas small businesses. $500, live in about a week.">
+<meta name="twitter:image" content="https://akkadstudio.com/social/og-1200x630.png">
+<style>
+:root{
+  --bg:#0a0a0b; --bg-2:#111114; --bg-3:#17171c;
+  --paper:#fafaf8; --ink:#0a0a0b;
+  --txt:#f2f2ef; --txt-2:#a3a3a8; --txt-3:#6b6b73;
+  --acc:#35c46b; --acc-d:#1f8f4f;
+  --line:#222228;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+button,input,select{font:inherit;color:inherit}
+.wrap{max-width:1240px;margin:0 auto;padding:0 30px}
+
+/* ── type scale: big and tight ── */
+.mega{font-size:clamp(46px,9.2vw,124px);line-height:.9;letter-spacing:-.055em;font-weight:860}
+.big{font-size:clamp(34px,5.4vw,72px);line-height:.96;letter-spacing:-.04em;font-weight:850}
+.mid{font-size:clamp(24px,3.2vw,40px);line-height:1.08;letter-spacing:-.028em;font-weight:800}
+.acc{color:var(--acc)}
+.lede{font-size:clamp(17px,1.7vw,21px);line-height:1.5;color:var(--txt-2);max-width:56ch}
+.label{font-size:11.5px;font-weight:750;letter-spacing:.22em;text-transform:uppercase;color:var(--acc)}
+
+/* ── nav ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:90;background:rgba(10,10,11,.72);backdrop-filter:blur(16px) saturate(160%);border-bottom:1px solid var(--line)}
+.nv{display:flex;align-items:center;justify-content:space-between;height:70px}
+.lg{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:-.02em;font-size:17px;white-space:nowrap;flex:none}
+.nl{display:flex;align-items:center;gap:28px;font-size:14.5px;color:var(--txt-2);font-weight:500}
+.nl a:hover{color:var(--txt)}
+.cta-btn{background:var(--acc);color:#111;padding:10px 20px;border-radius:8px;font-weight:750;font-size:14.5px;transition:.15s}
+.cta-btn:hover{background:#4fd884;transform:translateY(-1px)}
+.burger{display:none;background:transparent;border:1px solid var(--line);border-radius:9px;width:46px;height:40px;cursor:pointer;padding:0;align-items:center;justify-content:center;flex-direction:column;gap:4px}
+.burger span{display:block;width:19px;height:2px;background:var(--txt);border-radius:2px;transition:.2s}
+nav.open .burger span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+nav.open .burger span:nth-child(2){opacity:0}
+nav.open .burger span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+.menu{display:none;border-top:1px solid var(--line);background:rgba(10,10,11,.98);max-height:calc(100vh - 70px);overflow:auto}
+.menu a{display:block;padding:16px 30px;border-bottom:1px solid var(--line);font-size:16.5px;font-weight:650;color:var(--txt)}
+.menu a:last-child{color:var(--acc)}
+nav.open .menu{display:block}
+@media(max-width:900px){.nl a:not(.cta-btn){display:none}.nl{gap:12px}.burger{display:flex}}
+@media(min-width:901px){.menu{display:none!important}}
+
+/* ── hero ── */
+.hero{padding:150px 0 90px;position:relative;overflow:hidden}
+.glow{position:absolute;top:-180px;left:50%;transform:translateX(-50%);width:min(900px,150vw);height:600px;background:radial-gradient(ellipse at center,rgba(53,196,107,.13),transparent 62%);pointer-events:none}
+.hero h1{max-width:15ch;margin-bottom:26px;position:relative}
+.hero .lede{margin-bottom:40px}
+
+/* ── the machine ── */
+.machine{border:1px solid var(--line);border-radius:20px;background:linear-gradient(180deg,var(--bg-2),var(--bg));overflow:hidden;position:relative}
+.mhead{padding:26px 30px;border-bottom:1px solid var(--line);display:flex;gap:22px;align-items:flex-end;flex-wrap:wrap}
+.field{flex:1;min-width:210px}
+.field label{display:block;font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--txt-3);margin-bottom:9px}
+.field input,.field select{width:100%;background:var(--bg-3);border:1px solid var(--line);border-radius:10px;padding:14px 16px;font-size:16.5px;font-weight:600;color:var(--txt);transition:.15s}
+.field input:focus,.field select:focus{outline:0;border-color:var(--acc);background:#1c1c22}
+.field input::placeholder{color:var(--txt-3);font-weight:500}
+.gobtn{background:var(--acc);color:#111;border:0;border-radius:10px;padding:14px 30px;font-weight:800;font-size:16px;cursor:pointer;transition:.15s;white-space:nowrap}
+.gobtn:hover{background:#4fd884}
+.gobtn:active{transform:scale(.98)}
+
+/* preview stage */
+.stage{padding:34px;background:
+   radial-gradient(circle at 22% 18%,rgba(255,255,255,.035),transparent 44%),
+   repeating-linear-gradient(45deg,transparent,transparent 13px,rgba(255,255,255,.012) 13px,rgba(255,255,255,.012) 26px);
+   min-height:470px;display:flex;align-items:center;justify-content:center}
+.browser{width:100%;max-width:860px;border-radius:12px;overflow:hidden;box-shadow:0 40px 90px -30px rgba(0,0,0,.9),0 0 0 1px var(--line);background:#fff;transition:opacity .4s}
+.bbar{display:flex;align-items:center;gap:7px;padding:11px 14px;background:#e9e9ec;border-bottom:1px solid #d8d8dd}
+.bdot{width:11px;height:11px;border-radius:50%;background:#c6c6cd}
+.burl{flex:1;background:#fff;border-radius:6px;padding:5px 12px;font-size:12px;color:#6b6b73;margin-left:8px;text-align:center;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+.site{min-height:390px;position:relative;overflow:hidden}
+.empty{display:flex;flex-direction:column;align-items:center;justify-content:center;height:390px;color:#a9a9b2;text-align:center;padding:34px;background:#f7f7f5}
+.empty svg{margin-bottom:16px;opacity:.35}
+.empty b{color:#4a4a52;font-size:17px;display:block;margin-bottom:6px}
+
+/* generated site pieces */
+.gs{opacity:0;transform:translateY(16px)}
+.gs.in{opacity:1;transform:none;transition:opacity .5s ease,transform .5s cubic-bezier(.2,.7,.3,1)}
+.g-nav{display:flex;align-items:center;justify-content:space-between;padding:16px 26px;border-bottom:1px solid rgba(0,0,0,.07)}
+.g-logo{font-weight:800;font-size:17px;letter-spacing:-.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:52%}
+.g-links{display:flex;gap:17px;font-size:12.5px;font-weight:600;opacity:.62;white-space:nowrap}
+.g-cta{padding:7px 15px;border-radius:6px;font-size:12.5px;font-weight:750;white-space:nowrap;flex:none}
+@media(max-width:880px){.g-links{display:none}.g-logo{max-width:70%}}
+.g-hero{padding:52px 26px;text-align:center}
+.g-kick{font-size:10.5px;font-weight:750;letter-spacing:.2em;text-transform:uppercase;margin-bottom:13px}
+.g-h1{font-size:clamp(27px,4.4vw,44px);line-height:1.04;letter-spacing:-.035em;font-weight:850;margin-bottom:13px}
+.g-sub{font-size:14.5px;opacity:.7;max-width:44ch;margin:0 auto 22px;line-height:1.5}
+.g-btns{display:flex;gap:9px;justify-content:center}
+.g-b1,.g-b2{padding:11px 22px;border-radius:7px;font-size:13.5px;font-weight:750}
+.g-strip{display:flex;justify-content:space-around;padding:20px 26px;font-size:12.5px;font-weight:650;border-top:1px solid rgba(0,0,0,.07)}
+.g-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:24px 26px}
+.g-card{padding:17px;border-radius:9px;font-size:12.5px}
+.g-card b{display:block;font-size:14px;margin-bottom:5px}
+.g-gal{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:0 26px 24px}
+.g-gtile{aspect-ratio:4/3;border-radius:8px;display:flex;align-items:flex-end;padding:10px;font-size:11.5px;font-weight:750;color:#fff;text-shadow:0 1px 5px rgba(0,0,0,.55);position:relative;overflow:hidden}
+.g-gtile::after{content:'';position:absolute;inset:0;background:
+  repeating-linear-gradient(58deg,rgba(255,255,255,.09),rgba(255,255,255,.09) 2px,transparent 2px,transparent 11px)}
+.g-gtile span{position:relative;z-index:1}
+.g-foot{display:flex;justify-content:space-between;gap:16px;padding:20px 26px 24px;border-top:1px solid rgba(0,0,0,.07);font-size:13px;flex-wrap:wrap}
+.g-foot b{display:block;font-size:10px;letter-spacing:.16em;text-transform:uppercase;opacity:.48;margin-bottom:5px;font-weight:800}
+.g-foot .g-cta{align-self:center}
+
+.caption{text-align:center;padding:20px 30px 30px;color:var(--txt-3);font-size:14.5px;border-top:1px solid var(--line)}
+.caption b{color:var(--acc)}
+.typing::after{content:'▌';color:var(--acc);animation:bl .7s steps(1) infinite}
+@keyframes bl{50%{opacity:0}}
+
+/* ── sections ── */
+section{padding:120px 0;border-top:1px solid var(--line)}
+.head{max-width:22ch;margin-bottom:18px}
+.two{display:grid;grid-template-columns:1.05fr 1fr;gap:70px;align-items:center}
+@media(max-width:900px){.two{grid-template-columns:1fr;gap:40px}}
+
+/* the gap */
+.gap{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.gap>div{padding:40px}
+.gap .l{background:var(--bg-2);border-right:1px solid var(--line)}
+.gap .r{background:linear-gradient(160deg,rgba(53,196,107,.09),transparent)}
+.gap h4{font-size:12px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:22px;font-weight:750}
+.gap .l h4{color:var(--txt-3)}
+.gap .r h4{color:var(--acc)}
+.gap li{list-style:none;padding:11px 0;font-size:16px;display:flex;gap:12px;align-items:flex-start;border-bottom:1px solid rgba(255,255,255,.045)}
+.gap .l li{color:var(--txt-3)}
+.gap .r li{color:var(--txt)}
+@media(max-width:760px){.gap{grid-template-columns:1fr}.gap .l{border-right:0;border-bottom:1px solid var(--line)}}
+
+/* the six — a table of facts, not a card grid */
+.six{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden;margin-top:44px}
+.sx{background:var(--bg-2);padding:30px 28px;font-size:15.5px;color:var(--txt-2);line-height:1.55}
+.sx b{display:block;font-size:19px;color:var(--txt);margin-bottom:10px;letter-spacing:-.022em;font-weight:790}
+@media(max-width:900px){.six{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.six{grid-template-columns:1fr}.sx{padding:24px 22px}}
+
+/* how it works */
+.steps{counter-reset:st;margin-top:44px;border-top:1px solid var(--line)}
+.st{counter-increment:st;display:grid;grid-template-columns:88px 1fr;gap:26px;padding:32px 0;border-bottom:1px solid var(--line);align-items:start}
+.st::before{content:counter(st);font-size:46px;font-weight:860;letter-spacing:-.05em;color:var(--acc);line-height:.9}
+.st h4{font-size:23px;letter-spacing:-.028em;font-weight:800;margin-bottom:8px}
+.st p{color:var(--txt-2);font-size:16.5px;max-width:60ch}
+@media(max-width:600px){.st{grid-template-columns:1fr;gap:10px;padding:26px 0}.st::before{font-size:34px}}
+
+/* inventory — the wall (retired, kept for /capabilities links) */
+.inv{display:flex;flex-wrap:wrap;gap:9px;margin-top:34px}
+.chip{border:1px solid var(--line);background:var(--bg-2);border-radius:9px;padding:12px 17px;font-size:14.5px;font-weight:600;color:var(--txt-2);transition:.15s;cursor:default}
+.chip:hover{border-color:var(--acc);color:var(--txt);background:var(--bg-3)}
+.chip.live{border-color:rgba(53,196,107,.4);color:var(--txt)}
+.chip.live::before{content:'';display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--acc);margin-right:9px;vertical-align:middle;animation:bl2 2.4s infinite}
+@keyframes bl2{0%,100%{opacity:1}50%{opacity:.3}}
+
+/* work */
+.work{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:44px}
+@media(max-width:860px){.work{grid-template-columns:1fr}}
+.wk{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--bg-2);transition:.2s}
+.wk:hover{border-color:#33333c;transform:translateY(-3px)}
+.wkbar{display:flex;gap:6px;align-items:center;padding:10px 13px;background:var(--bg-3);border-bottom:1px solid var(--line)}
+.wkbar .d{width:9px;height:9px;border-radius:50%;background:#33333c}
+.wkbar span{flex:1;text-align:center;font-size:11px;color:var(--txt-3);font-family:ui-monospace,Menlo,monospace}
+.wkshot{overflow:hidden;aspect-ratio:16/10;background:#fff}
+.wkshot iframe{width:1280px;height:800px;border:0;transform-origin:0 0;pointer-events:none;transform:scale(var(--s,.4))}
+.wkft{padding:16px 18px;display:flex;justify-content:space-between;align-items:center}
+.wkft b{font-size:15px;font-weight:700}
+.wkft span{font-size:13px;color:var(--txt-3)}
+
+/* price */
+.price-row{display:flex;gap:16px;align-items:flex-end;flex-wrap:wrap;margin:26px 0 8px}
+.pnum{font-size:clamp(64px,11vw,148px);line-height:.82;font-weight:870;letter-spacing:-.06em;color:var(--acc)}
+.pmeta{font-size:17px;color:var(--txt-2);padding-bottom:14px}
+
+/* close */
+.close{text-align:center;padding:130px 0}
+.close .mega{max-width:16ch;margin:0 auto 26px}
+.bigbtn{display:inline-block;background:var(--acc);color:#111;padding:19px 42px;border-radius:11px;font-weight:800;font-size:18px;transition:.15s}
+.bigbtn:hover{background:#4fd884;transform:translateY(-2px)}
+footer{border-top:1px solid var(--line);padding:44px 0;color:var(--txt-3);font-size:14px;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+
+.rv{opacity:0;transform:translateY(22px)}
+.rv.in{opacity:1;transform:none;transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.3,1)}
+@media(prefers-reduced-motion:reduce){.rv,.rv.in,.gs,.gs.in{opacity:1;transform:none;transition:none}}
+
+/* ── phone ── */
+@media(max-width:640px){
+  html,body{overflow-x:clip}
+  .wrap{padding:0 18px}
+  .lg{font-size:15px;gap:8px}
+  .lg svg{width:23px;height:23px}
+  .cta-btn{padding:9px 14px;font-size:13.5px}
+  .menu a{padding:15px 18px}
+  section{padding:76px 0}
+  .hero{padding:110px 0 60px}
+  .mhead{padding:20px;gap:14px}
+  .field{min-width:100%}
+  .field[style]{max-width:100%!important}
+  .gobtn{width:100%}
+  .stage{padding:16px;min-height:0}
+  .site,.empty{min-height:300px}
+  .empty{height:auto;padding:40px 24px}
+  .g-links{display:none}
+  .g-hero{padding:34px 18px}
+  .g-nav{padding:13px 16px}
+  .g-cards{grid-template-columns:1fr;padding:18px 16px}
+  .g-gal{padding:0 16px 18px;gap:6px}
+  .g-foot{padding:16px;font-size:12px;flex-direction:column;gap:12px}
+  .g-strip{flex-direction:column;gap:7px;align-items:center;padding:16px}
+  .price-row{margin:18px 0 4px}
+  .close{padding:80px 0}
+  .close .lede{margin-bottom:30px}
+  footer .wrap{flex-direction:column;gap:14px}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="wrap nv">
+    <a class="lg" href="/">
+      <svg viewBox="0 0 64 64" width="27" height="27"><polygon points="32,8 57,50 7,50" fill="none" stroke="#35c46b" stroke-width="5.5" stroke-linejoin="round"/><polygon points="32,27 43,45 21,45" fill="#35c46b"/></svg>
+      Akkad Studio
+    </a>
+    <div class="nl">
+      <a href="#everything">What's in it</a>
+      <a href="#work">Work</a>
+      <a href="#how">How it works</a>
+      <a href="#price">Price</a>
+      <a class="cta-btn" href="/contact.html">Start a project</a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="menu" id="menu">
+    <a href="/">Home</a>
+    <a href="#everything">What's in it</a>
+    <a href="#work">Work</a>
+    <a href="#how">How it works</a>
+    <a href="#price">Price</a>
+    <a href="/capabilities.html">Everything it can do</a>
+    <a href="/contact.html">Start a project</a>
+  </div>
+</nav>
+
+<main>
+
+<header class="hero">
+  <div class="glow"></div>
+  <div class="wrap">
+    <div class="label" style="margin-bottom:22px">Northwest Arkansas</div>
+    <h1 class="mega">Type your name.<br>Watch your <span class="acc">website</span> build itself.</h1>
+    <p class="lede">Then we build the real one — properly, on your own domain, in a few days. <b style="color:var(--txt)">You pay nothing until you have seen it and said you like it.</b></p>
+
+    <div class="machine">
+      <div class="mhead">
+        <div class="field">
+          <label>Your business name</label>
+          <input id="bizName" placeholder="Bob's Barber Shop" maxlength="34" autocomplete="off">
+        </div>
+        <div class="field" style="max-width:230px">
+          <label>What you do</label>
+          <select id="bizType">
+            <option value="barber">Barbershop</option>
+            <option value="salon">Hair salon</option>
+            <option value="nails">Nail salon</option>
+            <option value="auto">Auto repair / collision</option>
+            <option value="tire">Tire shop</option>
+            <option value="engine">Small engine / mower repair</option>
+            <option value="cafe">Café / bakery / food</option>
+            <option value="lawn">Lawn / landscaping</option>
+            <option value="weld">Welding / fabrication</option>
+            <option value="fence">Fencing</option>
+            <option value="clean">House cleaning</option>
+            <option value="pet">Pet grooming / boarding</option>
+            <option value="tattoo">Tattoo / piercing</option>
+            <option value="uphol">Upholstery</option>
+            <option value="shop">Shop / greenhouse / retail</option>
+          </select>
+        </div>
+        <button class="gobtn" onclick="buildSite()">Build it →</button>
+      </div>
+
+      <div class="stage">
+        <div class="browser" id="browser">
+          <div class="bbar"><i class="bdot"></i><i class="bdot"></i><i class="bdot"></i><span class="burl" id="burl">yourbusiness.com</span></div>
+          <div class="site" id="site">
+            <div class="empty">
+              <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="#8a8a94" stroke-width="1.4"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 9h20M6 6.5h.01M9 6.5h.01"/></svg>
+              <b>Nothing here yet.</b>
+              Put your business name in the box and press Build.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="caption" id="cap">Built in your browser in about four seconds. <b>The real one takes about a week.</b></div>
+    </div>
+  </div>
+</header>
+
+
+<!-- ── THE GAP ─────────────────────────────────────────── -->
+<section id="gap">
+  <div class="wrap">
+    <div class="rv">
+      <div class="label" style="margin-bottom:18px">The honest version</div>
+      <h2 class="big head">Most local businesses are running on a Facebook page and a phone number.</h2>
+      <p class="lede" style="margin-bottom:44px">That worked for a long time. It stopped working when people started deciding who to call from a phone in a parking lot at 8pm.</p>
+    </div>
+
+    <div class="gap rv">
+      <div class="l">
+        <h4>What that costs you</h4>
+        <ul>
+          <li><span>—</span> Someone searches your trade at 9pm. You don't come up. Your competitor does.</li>
+          <li><span>—</span> Your hours live in three places and two of them are wrong.</li>
+          <li><span>—</span> Every price question is a phone call you have to stop working to take.</li>
+          <li><span>—</span> Photos of your best work are buried 400 posts deep.</li>
+          <li><span>—</span> No way to book you without talking to you first.</li>
+          <li><span>—</span> On a phone, the page pinches and zooms. People leave.</li>
+        </ul>
+      </div>
+      <div class="r">
+        <h4>What you'd have instead</h4>
+        <ul>
+          <li><span class="acc">→</span> One address you can paint on a truck.</li>
+          <li><span class="acc">→</span> Hours, phone and map that say the same thing everywhere.</li>
+          <li><span class="acc">→</span> Prices answered before the call, so the call is already a yes.</li>
+          <li><span class="acc">→</span> A gallery that opens with your best five photos.</li>
+          <li><span class="acc">→</span> Requests landing in your inbox while you're under a hood.</li>
+          <li><span class="acc">→</span> Loads in under a second on a phone with two bars.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── EVERYTHING IT CAN DO ────────────────────────────── -->
+<section id="everything">
+  <div class="wrap">
+    <div class="rv">
+      <div class="label" style="margin-bottom:18px">What actually goes in it</div>
+      <h2 class="big head" style="max-width:20ch">Six things. Not forty.</h2>
+      <p class="lede">Most of what gets sold to small businesses is padding. These are the parts that make a phone ring, and they are all in the $500.</p>
+    </div>
+
+    <div class="six rv">
+      <div class="sx"><b>Your hours, right</b>People check at 8pm. It says open or closed based on the actual clock, not a picture of a sign.</div>
+      <div class="sx"><b>Tap to call</b>One thumb, no typing, no copying a number into the keypad. Most of your calls will start here.</div>
+      <div class="sx"><b>Your prices, answered</b>The question you stop working to answer forty times a week, answered before they ring.</div>
+      <div class="sx"><b>Your best work, first</b>Five photos at the top instead of four hundred posts deep.</div>
+      <div class="sx"><b>Requests while you work</b>They send name, number and what they need. It lands in your inbox. You reply when your hands are clean.</div>
+      <div class="sx"><b>Found on Google</b>Set up so you come up when somebody searches your trade and your town — not just when they search your name.</div>
+    </div>
+
+    <p class="lede rv" style="margin-top:34px;color:var(--txt-3);font-size:16px">Want something else — booking, deposits, Spanish, a punch card, a service-area checker? We have <a href="/capabilities.html" style="color:var(--acc);border-bottom:1px solid rgba(53,196,107,.45)">fourteen more built and working here</a>. Ask and it goes in.</p>
+  </div>
+</section>
+
+<!-- ── WORK ────────────────────────────────────────────── -->
+<section id="work">
+  <div class="wrap">
+    <div class="rv">
+      <div class="label" style="margin-bottom:18px">Built, live, real</div>
+      <h2 class="big head">Not mockups. These are running websites.</h2>
+      <p class="lede">Every one of these is a real page you can open, scroll, and press buttons on. Click any of them.</p>
+    </div>
+
+    <div class="work">
+      <a class="wk rv" href="/demos/coffee.html">
+        <div class="wkbar"><i class="d"></i><i class="d"></i><i class="d"></i><span>copperkettlecoffee.com</span></div>
+        <div class="wkshot"><iframe src="/demos/coffee.html" loading="lazy" title="Coffee shop demo" scrolling="no" tabindex="-1"></iframe></div>
+        <div class="wkft"><b>Copper Kettle Coffee</b><span>Café · order ahead</span></div>
+      </a>
+      <a class="wk rv" href="/demos/salon.html">
+        <div class="wkbar"><i class="d"></i><i class="d"></i><i class="d"></i><span>lumierestudio.com</span></div>
+        <div class="wkshot"><iframe src="/demos/salon.html" loading="lazy" title="Salon demo" scrolling="no" tabindex="-1"></iframe></div>
+        <div class="wkft"><b>Lumière Hair Studio</b><span>Salon · booking</span></div>
+      </a>
+      <a class="wk rv" href="/demos/plants.html">
+        <div class="wkbar"><i class="d"></i><i class="d"></i><i class="d"></i><span>fernwoodandco.com</span></div>
+        <div class="wkshot"><iframe src="/demos/plants.html" loading="lazy" title="Plant shop demo" scrolling="no" tabindex="-1"></iframe></div>
+        <div class="wkft"><b>Fernwood &amp; Co.</b><span>Retail · catalogue</span></div>
+      </a>
+      <a class="wk rv" href="/capabilities.html">
+        <div class="wkbar"><i class="d"></i><i class="d"></i><i class="d"></i><span>akkadstudio.com/capabilities</span></div>
+        <div class="wkshot"><iframe src="/capabilities.html" loading="lazy" title="Capabilities demo" scrolling="no" tabindex="-1"></iframe></div>
+        <div class="wkft"><b>The working toolbox</b><span>14 live features</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── HOW IT WORKS ────────────────────────────────────── -->
+<section id="how">
+  <div class="wrap">
+    <div class="rv">
+      <div class="label" style="margin-bottom:18px">How this works</div>
+      <h2 class="big head" style="max-width:19ch">We build it first. You pay if you like it.</h2>
+      <p class="lede">You have never met us and we turned up in your messages. So we are not going to ask you for money before you have seen the thing. Here is the whole process, start to finish.</p>
+    </div>
+
+    <div class="steps rv">
+      <div class="st">
+        <div>
+          <h4>You say yes</h4>
+          <p>One line back to us — your business name and roughly what you do. That is the entire commitment. No form, no call, no card, nothing to sign.</p>
+        </div>
+      </div>
+      <div class="st">
+        <div>
+          <h4>We build your actual site</h4>
+          <p>Not a template with your name dropped in. Your services, your hours, your prices, your photos if you send them and stock ones if you don't. Two or three days. You do nothing while we do it.</p>
+        </div>
+      </div>
+      <div class="st">
+        <div>
+          <h4>You look at it</h4>
+          <p>We send you a link only you have. Open it on your phone at the counter. Anything wrong — wrong hours, wrong prices, hate the colour — tell us and we fix it. Twice, three times, however many times it takes.</p>
+        </div>
+      </div>
+      <div class="st">
+        <div>
+          <h4>You decide</h4>
+          <p><b style="color:var(--txt)">Like it:</b> $500 and it goes live on your own domain, usually the same day. <b style="color:var(--txt)">Don't:</b> close the tab. No invoice, no follow-up, nothing owed, and we won't message you again. We wear the work.</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="lede rv" style="margin-top:36px;max-width:60ch">That last part is not generosity. It is the only honest way to prove we are real to somebody who has never met us — and if we can't build something you'd happily pay for, we shouldn't get paid.</p>
+  </div>
+</section>
+
+<!-- ── PRICE ───────────────────────────────────────────── -->
+<section id="price">
+  <div class="wrap">
+    <div class="two">
+      <div class="rv">
+        <div class="label" style="margin-bottom:18px">Price</div>
+        <h2 class="big head">One number. No packages, no tiers, no discovery call.</h2>
+        <div class="price-row">
+          <div class="pnum">$500</div>
+          <div class="pmeta">for the site<br>paid after you've seen it, not before</div>
+        </div>
+        <p class="lede" style="margin-top:26px">That covers the build, the writing, your domain, hosting setup, the phone version, and getting it in front of Google. There is no sixth page that costs extra, and there is nothing to pay until you have looked at the finished thing and said yes.</p>
+      </div>
+      <div class="rv">
+        <div style="border:1px solid var(--line);border-radius:16px;background:var(--bg-2);padding:34px">
+          <div class="price-row" style="margin-top:0">
+            <div class="pnum" style="font-size:clamp(46px,7vw,84px)">$99</div>
+            <div class="pmeta" style="padding-bottom:8px">/ month<br>optional, cancel anytime</div>
+          </div>
+          <p style="color:var(--txt-2);font-size:16px;margin-top:18px;line-height:1.55">Hosting, backups, security updates, and unlimited small changes — new hours, new prices, new photos, a holiday notice. You text us, it's done that day.</p>
+          <p style="color:var(--txt-3);font-size:14.5px;margin-top:16px">Skip it if you'd rather run it yourself. The site is yours either way.</p>
+        </div>
+        <div style="margin-top:22px;display:flex;gap:14px;flex-wrap:wrap;color:var(--txt-3);font-size:14px">
+          <span>✓ You own the domain</span><span>✓ You own the files</span><span>✓ No contract</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CLOSE ───────────────────────────────────────────── -->
+<section class="close">
+  <div class="wrap rv">
+    <h2 class="mega">The worst thing that can happen is you say no.</h2>
+    <p class="lede" style="margin:0 auto 40px;text-align:left;max-width:54ch">Send us your business name and roughly what you do. We build the real one, you look at it, and then you decide. If it isn't worth $500 to you, you owe nothing and you never hear from us again.</p>
+    <a class="bigbtn" href="/contact.html">Have us build it →</a>
+    <p style="margin-top:26px;color:var(--txt-3);font-size:14.5px">Four boxes and a send button. We reply in writing, same day.</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap" style="display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;width:100%">
+    <div>© 2026 Akkad Studio · Northwest Arkansas</div>
+    <div style="display:flex;gap:22px;flex-wrap:wrap">
+      <a href="/web-design-fayetteville.html">Fayetteville</a>
+      <a href="/web-design-springdale.html">Springdale</a>
+      <a href="/web-design-rogers.html">Rogers</a>
+      <a href="/web-design-bentonville.html">Bentonville</a>
+      <a href="/capabilities.html">Capabilities</a>
+      <a href="/contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+/* ── mobile menu ────────────────────────────────────── */
+(function(){
+  var nav = document.getElementById('nav'), b = document.getElementById('burger');
+  if(!nav || !b) return;
+  function set(open){
+    nav.classList.toggle('open', open);
+    b.setAttribute('aria-expanded', open ? 'true' : 'false');
+    b.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  }
+  b.addEventListener('click', function(){ set(!nav.classList.contains('open')); });
+  document.querySelectorAll('#menu a').forEach(function(a){
+    a.addEventListener('click', function(){ set(false); });
+  });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') set(false); });
+  document.addEventListener('click', function(e){
+    if(nav.classList.contains('open') && !nav.contains(e.target)) set(false);
+  });
+})();
+
+/* ── reveal on scroll ───────────────────────────────── */
+var io = new IntersectionObserver(function(es){
+  es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+},{threshold:.12,rootMargin:'0px 0px -60px 0px'});
+document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+
+/* ── scale the live iframe previews ─────────────────── */
+function fitFrames(){
+  document.querySelectorAll('.wkshot').forEach(function(shot){
+    shot.style.setProperty('--s', (shot.clientWidth / 1280).toFixed(4));
+  });
+}
+window.addEventListener('resize', fitFrames);
+window.addEventListener('load', fitFrames);
+fitFrames();
+
+/* ── the capability wall ────────────────────────────── */
+var LIVE = [
+  ['Open or closed, right now','open'],
+  ['Booking requests','book'],
+  ['Before & after slider','slider'],
+  ['Order ahead','order'],
+  ['Instant search','search'],
+  ['Instant quote estimator','quote'],
+  ['English / Español','lang'],
+  ['Photo gallery + lightbox','gallery'],
+  ['Reviews carousel','reviews'],
+  ['Service-area ZIP checker','zip'],
+  ['FAQ accordion','faq'],
+  ['Loyalty punch card','punch'],
+  ['Light & dark mode','theme'],
+  ['Tap to call','call']
+];
+var MORE = ['Online payments','Deposits & retainers','Gift cards','Text reminders','Google reviews feed','Google Maps embed','Calendar sync','Staff profiles','Menu / price list','Downloadable PDFs','Email newsletter','Blog & news','Job applications','Financing calculator','Live chat','WhatsApp button','Multi-location pages','Inventory listing','Customer portal','Invoice requests','Waitlist','Event calendar','Seasonal banners','Coupon codes','Traffic analytics','Core Web Vitals tuning','Schema & rich results','WCAG accessibility','SSL & security headers','Nightly backups','Uptime monitoring','Spam-proof forms','Automatic image optimisation','Custom typography','Video backgrounds','Fleet & vehicle listings','Quote-to-invoice','CRM handoff','Zapier automations','QR code menus'];
+(function(){
+  var inv = document.getElementById('inv'); if(!inv) return;
+  var html = '';
+  LIVE.forEach(function(c){ html += '<a class="chip live" href="/capabilities.html#c-'+c[1]+'">'+c[0]+'</a>'; });
+  MORE.forEach(function(c){ html += '<span class="chip">'+c+'</span>'; });
+  inv.innerHTML = html;
+})();
+
+/* ── THE MACHINE ────────────────────────────────────── */
+var TRADES = {
+  barber:{
+    pal:{bg:'#f6f4f1',ink:'#161513',acc:'#b23a2e',soft:'#ece9e4',btn:'#ffffff'},
+    kick:'Walk-ins welcome',
+    h1:'A proper cut, ten minutes from your door.',
+    sub:'Straight razors, hot towels, and nobody rushing you out of the chair.',
+    b1:'Book a chair', b2:'See the work',
+    strip:['Open till 7pm','Cash &amp; card','4.9 ★ · 212 reviews'],
+    cards:[['Fades &amp; tapers','Skin, low, mid, high. However you want it.'],['Beard &amp; hot towel','Shaped, lined, and finished properly.'],['Kids&rsquo; cuts','Quick, patient, and no fuss.']]
+  },
+  auto:{
+    pal:{bg:'#f3f5f8',ink:'#0f1a25',acc:'#e2611a',soft:'#e4eaf1',btn:'#ffffff'},
+    kick:'Collision &amp; mechanical',
+    h1:'Back on the road, done right the first time.',
+    sub:'Estimates while you wait, every insurer accepted, and a warranty that outlives the car.',
+    b1:'Get an estimate', b2:'Our services',
+    strip:['Free estimates','All insurance accepted','Lifetime warranty'],
+    cards:[['Collision repair','Frame, panel, paint. Matched to your factory colour.'],['Diagnostics','Engine, electrical, and calibration after glass or bumper work.'],['Tyres &amp; alignment','Mounted, balanced, and set to spec.']]
+  },
+  cafe:{
+    pal:{bg:'#fbf7f0',ink:'#2a1c12',acc:'#8a5a33',soft:'#f1e7d9',btn:'#ffffff'},
+    kick:'Roasted in house',
+    h1:'Good coffee, no ceremony.',
+    sub:'Pulled properly, poured fast, and ready before you reach the counter.',
+    b1:'Order ahead', b2:'See the menu',
+    strip:['Open 6am daily','Drive-thru','Baked every morning'],
+    cards:[['Espresso bar','Single origin on rotation, plus the one you always get.'],['Fresh pastry','Out of the oven before the doors open.'],['Catering','Boxes of coffee and trays for the office.']]
+  },
+  lawn:{
+    pal:{bg:'#f3f7f2',ink:'#11251a',acc:'#3d8f3a',soft:'#e3efe2',btn:'#ffffff'},
+    kick:'Serving the whole valley',
+    h1:'Your yard, handled. Every week, on time.',
+    sub:'Same crew, same day, whether you are home or not.',
+    b1:'Get a quote', b2:'What we do',
+    strip:['Free quotes','Licensed &amp; insured','Weekly or one-off'],
+    cards:[['Mowing &amp; edging','Cut, edged, blown clean. Nothing left on the drive.'],['Seasonal cleanups','Leaves, limbs, and everything winter left behind.'],['Beds &amp; mulch','Shaped, weeded, and topped up.']]
+  },
+  weld:{
+    pal:{bg:'#f4f4f5',ink:'#0d0d0f',acc:'#ff6a13',soft:'#e7e7ea',btn:'#ffffff'},
+    kick:'Custom fabrication',
+    h1:'If it&rsquo;s steel, we can build it.',
+    sub:'Shop work, mobile repair, and one-off fabrication for people who need it to hold.',
+    b1:'Request a quote', b2:'See the work',
+    strip:['Mobile welding','Custom fab','Same-week starts'],
+    cards:[['Gates &amp; fencing','Built to the opening you actually have.'],['Trailer repair','Frames, decks, hitches, and lights.'],['Handrails &amp; frames','Code-height, powder-coated, installed.']]
+  },
+  pet:{
+    pal:{bg:'#fdf6f7',ink:'#291d22',acc:'#cf5f81',soft:'#f7e6ec',btn:'#ffffff'},
+    kick:'Grooming &amp; boarding',
+    h1:'They come home happy. And clean.',
+    sub:'Small shop, no cages stacked to the ceiling, and the same groomer every time.',
+    b1:'Book a groom', b2:'Meet the team',
+    strip:['Open Saturdays','Small &amp; large breeds','Walk-in nail trims'],
+    cards:[['Full groom','Bath, cut, ears, nails, and a bandana.'],['Bath &amp; tidy','For the ones who just need a freshen-up.'],['Overnight boarding','Bedtime check-ins and a photo before lights out.']]
+  },
+  salon:{
+    pal:{bg:'#faf7f8',ink:'#241a20',acc:'#8f5f7a',soft:'#f0e6ec',btn:'#ffffff'},
+    kick:'Colour &amp; cutting',
+    h1:'Booked, blended, and out the door on time.',
+    sub:'Colour that holds, cuts that grow out right, and a stylist who remembers what you asked for last time.',
+    b1:'Book an appointment', b2:'See the work',
+    strip:['Online booking','Colour corrections','Evening slots'],
+    cards:[['Cut &amp; style','Consultation first. We will tell you if it will not work.'],['Colour','Balayage, highlights, greys, and full corrections.'],['Treatments','Olaplex, gloss, and keratin smoothing.']]
+  },
+  nails:{
+    pal:{bg:'#fdf7f4',ink:'#2b1e1a',acc:'#c56a4e',soft:'#f7e8e1',btn:'#ffffff'},
+    kick:'Hands &amp; feet',
+    h1:'Nails that last past the weekend.',
+    sub:'Clean tools, honest timing, and no upsell you did not ask for.',
+    b1:'Book a set', b2:'See the menu',
+    strip:['Walk-ins welcome','Gel &amp; acrylic','Pedicure chairs'],
+    cards:[['Manicures','Classic, gel, dip, and structured overlays.'],['Pedicures','Warm soak, callus work, and a proper massage.'],['Nail art','Bring a photo. We will match it or tell you straight.']]
+  },
+  tire:{
+    pal:{bg:'#f4f5f7',ink:'#131519',acc:'#c4271f',soft:'#e6e8ec',btn:'#ffffff'},
+    kick:'Tires &amp; service',
+    h1:'New rubber on, old rubber gone, in under an hour.',
+    sub:'Every major brand in stock, mounted and balanced while you wait.',
+    b1:'Check tire prices', b2:'Our services',
+    strip:['Free rotations','Road hazard warranty','Open Saturdays'],
+    cards:[['New tires','All sizes, all budgets, priced out the door.'],['Flat repair','Patched properly from the inside, not plugged.'],['Alignment','Four-wheel, printed before-and-after readout.']]
+  },
+  engine:{
+    pal:{bg:'#f4f6f4',ink:'#14180f',acc:'#d1811b',soft:'#e6ebe4',btn:'#ffffff'},
+    kick:'Small engine repair',
+    h1:'If it has a pull cord, we can fix it.',
+    sub:'Mowers, trimmers, chainsaws, blowers, generators, and the tiller that has not started since spring.',
+    b1:'Get it looked at', b2:'What we service',
+    strip:['Free estimates','Pickup available','Most jobs in a week'],
+    cards:[['Mowers','Push, riding, and zero-turn. Blades, decks, and carbs.'],['Handhelds','Trimmers, saws, blowers, edgers.'],['Tune-ups','Plug, filter, oil, blade, and a carb clean before the season.']]
+  },
+  fence:{
+    pal:{bg:'#f6f5f2',ink:'#1c1a15',acc:'#8a6a34',soft:'#ece8df',btn:'#ffffff'},
+    kick:'Fencing &amp; land clearing',
+    h1:'A straight line, set deep, done once.',
+    sub:'Wood, chain link, vinyl and farm fence, plus the stumps in the way of it.',
+    b1:'Get a quote', b2:'See the work',
+    strip:['Free on-site quotes','Locates called in','Rural &amp; residential'],
+    cards:[['Privacy fence','Cedar and pine, set in concrete, capped and trimmed.'],['Chain link &amp; farm','Kennels, pasture, and property lines.'],['Stump grinding','Ground below grade and raked clean.']]
+  },
+  clean:{
+    pal:{bg:'#f4f7f8',ink:'#12191c',acc:'#2f8c9b',soft:'#e3eef1',btn:'#ffffff'},
+    kick:'Homes &amp; offices',
+    h1:'Come home to a house that is actually clean.',
+    sub:'Same team every visit, your own checklist, and no contract to sign.',
+    b1:'Get a quote', b2:'What is included',
+    strip:['Insured &amp; bonded','Weekly or one-off','Move-outs welcome'],
+    cards:[['Recurring clean','Weekly, fortnightly, or monthly. Same crew each time.'],['Deep clean','Baseboards, blinds, ovens, and inside the fridge.'],['Move in / out','Landlord-standard, photographed when we finish.']]
+  },
+  tattoo:{
+    pal:{bg:'#f4f3f4',ink:'#0f0e11',acc:'#7d3fb5',soft:'#e7e4ea',btn:'#ffffff'},
+    kick:'Custom tattoo &amp; piercing',
+    h1:'Bring the idea. We will draw the rest.',
+    sub:'Licensed, single-use needles, and a consultation before anyone touches a machine.',
+    b1:'Book a consult', b2:'See the portfolio',
+    strip:['State licensed','Custom drawing','Walk-in piercings'],
+    cards:[['Custom work','Sleeves, cover-ups, and pieces built around your body.'],['Fine line &amp; script','Small, clean, and healed to last.'],['Piercing','Implant-grade jewellery and proper aftercare.']]
+  },
+  uphol:{
+    pal:{bg:'#f7f4f0',ink:'#1f1913',acc:'#9c5b2f',soft:'#eee5da',btn:'#ffffff'},
+    kick:'Upholstery &amp; trim',
+    h1:'Rebuilt, recovered, and better than it left the factory.',
+    sub:'Auto interiors, furniture, boat and tractor seats. Bring the fabric or pick from ours.',
+    b1:'Get a quote', b2:'See the work',
+    strip:['Free quotes','Auto &amp; furniture','Marine grade vinyl'],
+    cards:[['Auto interiors','Seats, headliners, door cards, and convertible tops.'],['Furniture','Frames tightened, foam replaced, fabric your choice.'],['Marine &amp; outdoor','UV vinyl and thread that will not rot out.']]
+  },
+  shop:{
+    pal:{bg:'#f6f6f3',ink:'#191b16',acc:'#4c7a3f',soft:'#e8ebe3',btn:'#ffffff'},
+    kick:'Local, independent',
+    h1:'Come in. It is better in person.',
+    sub:'A small shop with things you cannot get at the big box, and someone who knows what they are.',
+    b1:'See what is in', b2:'Visit us',
+    strip:['Open six days','Local pickup','Gift cards'],
+    cards:[['What we carry','Stocked weekly and photographed so you know before you drive.'],['Special orders','Tell us what you want and we will find it.'],['Advice','We will tell you what not to buy, too.']]
+  }
+};
+
+/* extra depth injected under the cards */
+var EXTRA = {
+  barber:{gal:['Fades','Beard work','Kids'],   hrs:'Tue–Fri 9–7 · Sat 8–4'},
+  salon: {gal:['Colour','Cuts','Treatments'],  hrs:'Tue–Sat 9–6 · late Thu'},
+  nails: {gal:['Gel sets','Pedicures','Art'],  hrs:'Mon–Sat 9–7 · Sun 11–5'},
+  auto:  {gal:['Collision','Paint','Repairs'], hrs:'Mon–Fri 7:30–5:30 · Sat 8–12'},
+  tire:  {gal:['New tires','Alignment','Flats'],hrs:'Mon–Fri 7–6 · Sat 7–3'},
+  engine:{gal:['Mowers','Saws','Tune-ups'],    hrs:'Mon–Fri 8–5 · Sat 8–12'},
+  cafe:  {gal:['Espresso','Pastry','The room'],hrs:'Daily 6am–3pm'},
+  lawn:  {gal:['Mowing','Cleanups','Beds'],    hrs:'Mon–Sat 7–6'},
+  weld:  {gal:['Gates','Trailers','Rails'],    hrs:'Mon–Fri 7–5 · mobile after'},
+  fence: {gal:['Privacy','Farm fence','Stumps'],hrs:'Mon–Sat 7–6'},
+  clean: {gal:['Kitchens','Baths','Move-outs'],hrs:'Mon–Fri 8–5'},
+  pet:   {gal:['Full grooms','Puppies','Boarding'],hrs:'Tue–Sat 8–5'},
+  tattoo:{gal:['Custom','Fine line','Piercing'],hrs:'Tue–Sat 12–9'},
+  uphol: {gal:['Auto','Furniture','Marine'],   hrs:'Mon–Fri 8–5'},
+  shop:  {gal:['New in','Best sellers','The shop'],hrs:'Mon–Sat 10–6'}
+};
+
+function slugify(s){
+  return (s||'').toLowerCase().replace(/&rsquo;|&#39;|['‘’ʼ]/g,'').replace(/&/g,'and').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'').slice(0,38) || 'yourbusiness';
+}
+function esc(s){ return (s||'').replace(/[<>]/g,''); }
+
+var building = false, autoTimer = null, touched = false, gen = 0;
+
+function buildSite(auto){
+  var g = ++gen;                 /* any older build in flight is now void */
+  var nameEl = document.getElementById('bizName');
+  var raw = esc(nameEl.value.trim());
+  if(!raw){
+    if(!auto){ nameEl.focus(); nameEl.placeholder='Put a name here first →'; return; }
+    raw = 'Bob&rsquo;s Barber Shop';
+  }
+  building = true;
+  if(!auto){ touched = true; }
+  clearTimeout(autoTimer);
+
+  var t = TRADES[document.getElementById('bizType').value] || TRADES.barber;
+  var p = t.pal;
+  var site = document.getElementById('site');
+  var burl = document.getElementById('burl');
+  var cap  = document.getElementById('cap');
+  var domain = slugify(raw.replace(/&rsquo;/g,'')) + '.com';
+
+  site.innerHTML = '';
+  site.style.background = p.bg;
+  site.style.color = p.ink;
+  cap.innerHTML = 'Building <b>' + domain + '</b><span class="typing"></span>';
+
+  /* type the address bar */
+  burl.textContent = '';
+  var i = 0;
+  (function typeUrl(){
+    if(g !== gen) return;
+    burl.textContent = domain.slice(0, ++i);
+    if(i < domain.length) setTimeout(typeUrl, 26);
+  })();
+
+  var step = 0;
+  function add(html, delay){
+    step += delay;
+    setTimeout(function(){
+      if(g !== gen) return;
+      var d = document.createElement('div');
+      d.className = 'gs';
+      d.innerHTML = html;
+      site.appendChild(d);
+      requestAnimationFrame(function(){ d.classList.add('in'); });
+    }, step);
+  }
+
+  /* 1 — nav */
+  add('<div class="g-nav" style="background:'+p.bg+'">'
+    + '<div class="g-logo" style="color:'+p.ink+'">'+raw+'</div>'
+    + '<div class="g-links" style="color:'+p.ink+'"><span>Services</span><span>Gallery</span><span>About</span><span>Contact</span></div>'
+    + '<div class="g-cta" style="background:'+p.acc+';color:'+p.btn+'">'+t.b1+'</div>'
+    + '</div>', 380);
+
+  /* 2 — hero shell, headline typed in */
+  add('<div class="g-hero">'
+    + '<div class="g-kick" style="color:'+p.acc+'">'+t.kick+'</div>'
+    + '<div class="g-h1" id="gh1" style="color:'+p.ink+'"></div>'
+    + '<div class="g-sub" style="color:'+p.ink+'">'+t.sub+'</div>'
+    + '<div class="g-btns">'
+    +   '<div class="g-b1" style="background:'+p.acc+';color:'+p.btn+'">'+t.b1+'</div>'
+    +   '<div class="g-b2" style="background:'+p.soft+';color:'+p.ink+'">'+t.b2+'</div>'
+    + '</div></div>', 420);
+
+  setTimeout(function(){
+    if(g !== gen) return;
+    var h = document.getElementById('gh1');
+    if(!h) return;
+    var txt = t.h1.replace(/&rsquo;/g,'’'), j = 0;
+    h.classList.add('typing');
+    (function typeH(){
+      if(g !== gen) return;
+      h.textContent = txt.slice(0, ++j);
+      if(j < txt.length) setTimeout(typeH, 22);
+      else h.classList.remove('typing');
+    })();
+  }, step + 180);
+
+  /* 3 — trust strip */
+  add('<div class="g-strip" style="background:'+p.soft+';color:'+p.ink+'">'
+    + t.strip.map(function(s){ return '<span>'+s+'</span>'; }).join('')
+    + '</div>', 1250);
+
+  /* 4 — service cards */
+  add('<div class="g-cards">'
+    + t.cards.map(function(c){
+        return '<div class="g-card" style="background:'+p.soft+';color:'+p.ink+'">'
+             + '<b style="color:'+p.acc+'">'+c[0]+'</b>'+c[1]+'</div>';
+      }).join('')
+    + '</div>', 420);
+
+  /* 5 — gallery */
+  var x = EXTRA[document.getElementById('bizType').value] || EXTRA.barber;
+  var angles = [148, 32, 108];
+  add('<div class="g-gal">'
+    + x.gal.map(function(g,k){
+        return '<div class="g-gtile" style="background:linear-gradient('+angles[k]+'deg,'+p.acc+','+p.ink+')">'
+             + '<span>'+g+'</span></div>';
+      }).join('')
+    + '</div>', 380);
+
+  /* 6 — hours, contact, footer */
+  add('<div class="g-foot" style="background:'+p.soft+';color:'+p.ink+'">'
+    + '<div><b>Hours</b>'+x.hrs+'</div>'
+    + '<div><b>Call</b>(479) 555‑0100</div>'
+    + '<div><b>Find us</b>Northwest Arkansas</div>'
+    + '<div class="g-cta" style="background:'+p.acc+';color:'+p.btn+'">'+t.b1+'</div>'
+    + '</div>', 380);
+
+  setTimeout(function(){
+    if(g !== gen) return;
+    cap.innerHTML = auto
+      ? 'That one built itself. <b>Now put your own name in the box.</b>'
+      : 'Built in your browser in about four seconds. <b>The real one takes a few days — and you only pay if you like it.</b>';
+    building = false;
+  }, step + 500);
+}
+
+/* enter key + stop the autoplay once they touch anything */
+(function(){
+  var n = document.getElementById('bizName');
+  var ty = document.getElementById('bizType');
+  n.addEventListener('keydown', function(e){ if(e.key === 'Enter'){ e.preventDefault(); buildSite(); } });
+  ['input','focus'].forEach(function(ev){ n.addEventListener(ev, function(){ touched = true; clearTimeout(autoTimer); }); });
+  ty.addEventListener('change', function(){ touched = true; clearTimeout(autoTimer); if(n.value.trim()) buildSite(); });
+
+  /* ── arrived from a personalised link: /?b=Their+Name&t=trade ── */
+  var q  = new URLSearchParams(location.search);
+  var qb = esc((q.get('b') || '').trim()).slice(0,34);
+  var qt = (q.get('t') || '').trim();
+  if(qb){
+    touched = true;
+    n.value = qb;
+    if(TRADES[qt]) ty.value = qt;
+
+    var lab = document.querySelector('.hero .label');
+    if(lab) lab.textContent = 'Built for ' + qb;
+
+    var h1 = document.querySelector('.hero h1');
+    if(h1){
+      h1.innerHTML = 'We already built<br><span class="acc">' +
+        qb.replace(/[&]/g,'&amp;') + '</span><br>a website.';
+      h1.style.maxWidth = '20ch';
+      if(qb.length > 17) h1.style.fontSize = 'clamp(36px,6.4vw,88px)';
+      if(qb.length > 26) h1.style.fontSize = 'clamp(32px,5.4vw,72px)';
+    }
+
+    var ld = document.querySelector('.hero .lede');
+    if(ld) ld.innerHTML = 'It is sitting right below this, and it took four seconds. ' +
+      'The real one takes a few days, runs on your own domain, and is yours to keep — ' +
+      '<b style="color:var(--txt)">and you pay nothing until you have seen it and said you like it.</b>';
+
+    setTimeout(function(){ buildSite(); }, 650);
+    setTimeout(function(){
+      var c = document.getElementById('cap');
+      if(c) c.innerHTML = 'That is <b>' + qb.replace(/[&]/g,'&amp;') +
+        '</b>, built the second you opened this link. Change the name or the trade and it will build that instead.';
+    }, 4600);
+    return;
+  }
+
+  /* if nobody touches it, show them what it does */
+  autoTimer = setTimeout(function(){
+    if(touched || building || document.querySelector('#site .gs')) return;
+    var n2 = document.getElementById('bizName');
+    n2.value = 'Bob’s Barber Shop';
+    buildSite(true);
+    setTimeout(function(){ if(!touched) n2.value = ''; }, 3600);
+  }, 4200);
+})();
+</script>
+
+</body>
+</html>

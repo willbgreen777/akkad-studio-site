@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Akkad Studio — Websites &amp; Digital Tools for Small Businesses</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<meta name="description" content="Akkad Studio designs websites and digital tools for small businesses — from cafés to collision shops. Sites from $500, monthly Care Plans from $49, plus booking, ordering, reviews, and AI add-ons." />
+<link rel="canonical" href="https://akkadstudio.com/" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+<meta name="ai-content-declaration" content="Official Akkad Studio site. Machine-readable summary at /llms.txt" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Akkad Studio" />
+<meta property="og:title" content="Akkad Studio — Websites &amp; Digital Tools for Small Businesses" />
+<meta property="og:description" content="Websites and digital tools that win customers for small businesses — with a specialty in collision &amp; calibration shops. Sites from $500, Care Plans from $49/mo." />
+<meta property="og:url" content="https://akkadstudio.com/" />
+<meta name="twitter:card" content="summary_large_image" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Akkad Studio",
+  "description": "Web and digital design studio building websites and digital tools for small businesses, with a specialty in collision-repair and ADAS/radar-calibration shops.",
+  "serviceType": "Web design, web development, and digital tools",
+  "url": "https://akkadstudio.com/",
+  "areaServed": "United States",
+  "knowsAbout": ["web design", "e-commerce", "online booking", "local SEO", "ADAS calibration", "collision repair", "website maintenance"],
+  "makesOffer": [
+    {"@type": "Offer", "name": "Custom website", "description": "Custom small-business website, from $500.", "priceCurrency": "USD"},
+    {"@type": "Offer", "name": "Care Plan", "description": "Monthly website hosting, maintenance, and tools, from $49/month.", "priceCurrency": "USD"}
+  ]
+}
+</script>
+<style>
+  :root{
+    --navy:#0a1626;--navy-2:#0f2038;--navy-3:#16304f;
+    --gold:#c9a227;--gold-soft:#e3c766;--muted:#9fb0c4;
+    --line:rgba(201,162,39,.25);--card:#0f2038;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Georgia','Times New Roman',serif;background:var(--navy);color:#e8edf4;line-height:1.6;-webkit-font-smoothing:antialiased;position:relative}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  a{color:inherit;text-decoration:none}
+
+  .speed-bg{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+  .speed-bg span{position:absolute;left:-32%;width:46%;height:1px;background:linear-gradient(90deg,transparent,rgba(201,162,39,.5),transparent);transform:rotate(-14deg);opacity:0;animation:streak 8s linear infinite}
+  @keyframes streak{0%{transform:translateX(0) rotate(-14deg);opacity:0}8%{opacity:.8}55%{opacity:.35}100%{transform:translateX(190vw) rotate(-14deg);opacity:0}}
+  header.nav, main, footer{position:relative;z-index:1}
+
+  header.nav{position:sticky;top:0;z-index:50;background:rgba(10,22,38,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .brand{display:flex;align-items:center;gap:12px;font-weight:bold;letter-spacing:.5px}
+  .brand .mark{width:42px;height:42px;display:flex;align-items:center;justify-content:center}
+  .brand b{font-size:19px}
+  .brand span{color:var(--gold);font-size:12px;letter-spacing:2px;display:block;font-family:'Helvetica Neue',Arial,sans-serif}
+  nav.links{display:flex;gap:28px;align-items:center;font-family:'Helvetica Neue',Arial,sans-serif;font-size:14px;letter-spacing:.3px}
+  nav.links a{color:var(--muted);transition:color .2s}
+  nav.links a:hover{color:var(--gold-soft)}
+  .btn{display:inline-block;font-family:'Helvetica Neue',Arial,sans-serif;font-size:14px;font-weight:600;letter-spacing:.4px;padding:11px 22px;border-radius:3px;cursor:pointer;transition:all .2s}
+  .btn-gold{background:var(--gold);color:var(--navy);border:1px solid var(--gold)}
+  .btn-gold:hover{background:var(--gold-soft);border-color:var(--gold-soft)}
+  .btn-ghost{border:1px solid var(--line);color:var(--gold-soft);background:transparent}
+  .btn-ghost:hover{border-color:var(--gold)}
+  @media(max-width:860px){nav.links a:not(.btn){display:none}}
+
+  .hero{padding:100px 0 78px;position:relative;overflow:hidden}
+  .hero:before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(900px 420px at 78% -10%, rgba(201,162,39,.12), transparent 60%)}
+  .eyebrow{font-family:'Helvetica Neue',Arial,sans-serif;font-size:12px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;margin-bottom:22px}
+  .hero h1{font-size:54px;line-height:1.08;font-weight:normal;letter-spacing:-.5px;max-width:19ch}
+  .hero h1 em{color:var(--gold-soft);font-style:italic}
+  .hero p.sub{margin-top:24px;font-size:20px;color:#c4d0de;max-width:62ch}
+  .hero-cta{margin-top:38px;display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+  @media(max-width:640px){.hero h1{font-size:35px}.hero{padding:64px 0 52px}}
+
+  .stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(15,32,56,.55)}
+  .stats-inner{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:34px 0}
+  .stat{text-align:center}
+  .stat b{display:block;font-size:26px;color:var(--gold-soft)}
+  .stat span{font-family:'Helvetica Neue',Arial,sans-serif;font-size:12px;letter-spacing:1.5px;color:var(--muted);text-transform:uppercase}
+  @media(max-width:640px){.stats-inner{grid-template-columns:1fr 1fr;gap:20px}}
+
+  section{padding:82px 0;position:relative}
+  .band{background:rgba(15,32,56,.55);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .sec-head{text-align:center;max-width:66ch;margin:0 auto 52px}
+  .sec-head .eyebrow{margin-bottom:14px}
+  .sec-head h2{font-size:38px;font-weight:normal;letter-spacing:-.3px;line-height:1.14}
+  .sec-head p{color:#c4d0de;margin-top:14px;font-size:18px}
+
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  @media(max-width:820px){.grid3{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:28px;transition:transform .2s,border-color .2s}
+  .card:hover{transform:translateY(-4px);border-color:var(--gold)}
+  .card .ic{width:46px;height:46px;border-radius:4px;background:var(--navy-3);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:18px}
+  .card h3{font-size:20px;font-weight:normal}
+  .card p{color:#b9c6d6;font-size:15px;margin-top:8px}
+
+  /* PORTFOLIO */
+  .folio{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+  @media(max-width:760px){.folio{grid-template-columns:1fr}}
+  .work{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--card);transition:transform .2s,border-color .2s;display:block}
+  .work:hover{transform:translateY(-4px);border-color:var(--gold)}
+  .work .prev{height:150px;display:flex;align-items:center;justify-content:center;font-size:56px}
+  .work .meta{padding:20px 22px;display:flex;align-items:center;justify-content:space-between}
+  .work .meta h3{font-size:20px;font-weight:normal}
+  .work .meta .type{font-family:'Helvetica Neue',Arial,sans-serif;font-size:11px;letter-spacing:1.5px;color:var(--gold);text-transform:uppercase}
+  .work .meta .go{font-family:'Helvetica Neue',Arial,sans-serif;font-size:13px;color:var(--gold-soft)}
+
+  /* SPECIALTY BAND */
+  .specialty{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center;border:1px solid var(--gold);border-radius:8px;padding:36px 40px;background:linear-gradient(135deg,var(--navy-2),var(--navy-3))}
+  @media(max-width:700px){.specialty{grid-template-columns:1fr;text-align:center}}
+  .specialty h3{font-size:26px;font-weight:normal;margin-bottom:8px}
+  .specialty p{color:#c4d0de;font-size:16px;max-width:60ch}
+
+  /* TOOLS MENU */
+  .tools{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+  @media(max-width:900px){.tools{grid-template-columns:1fr 1fr}}
+  @media(max-width:520px){.tools{grid-template-columns:1fr}}
+  .tcol h4{font-family:'Helvetica Neue',Arial,sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+  .tcol ul{list-style:none}
+  .tcol li{color:#c4d0de;font-size:15px;padding:7px 0 7px 20px;position:relative}
+  .tcol li:before{content:"›";position:absolute;left:0;color:var(--gold)}
+  .tcol .xsell{color:var(--gold-soft)}
+
+  /* PLANS */
+  .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch}
+  @media(max-width:820px){.plans{grid-template-columns:1fr}}
+  .plan{border:1px solid var(--line);border-radius:8px;padding:32px 28px;background:var(--card);display:flex;flex-direction:column}
+  .plan.feature{border-color:var(--gold);background:linear-gradient(180deg,var(--navy-2),var(--navy-3))}
+  .plan .tier{font-family:'Helvetica Neue',Arial,sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--gold)}
+  .plan .amt{font-size:38px;color:var(--gold-soft);margin:10px 0 2px}
+  .plan .amt small{font-size:15px;color:var(--muted);font-family:'Helvetica Neue',Arial,sans-serif}
+  .plan ul{list-style:none;margin:20px 0 0;flex:1}
+  .plan li{color:#c4d0de;font-size:14.5px;margin:9px 0;padding-left:24px;position:relative}
+  .plan li:before{content:"✓";position:absolute;left:0;color:var(--gold)}
+  .plan .badge{display:inline-block;font-family:'Helvetica Neue',Arial,sans-serif;font-size:11px;letter-spacing:1px;color:var(--navy);background:var(--gold);padding:3px 10px;border-radius:20px;margin-bottom:8px}
+  .sites-note{text-align:center;margin-top:34px;color:#c4d0de;font-size:16px}
+  .sites-note b{color:var(--gold-soft)}
+
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+  @media(max-width:760px){.steps{grid-template-columns:1fr}}
+  .step{text-align:center}
+  .step .num{width:52px;height:52px;margin:0 auto 18px;border:2px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:22px}
+  .step h4{font-size:20px;font-weight:normal;margin-bottom:8px}
+  .step p{color:#b9c6d6;font-size:15px}
+
+  .cta-band{text-align:center}
+  .cta-band h2{font-size:36px;font-weight:normal;margin-bottom:10px}
+  .cta-band p{color:#c4d0de;font-size:18px;margin-bottom:28px}
+
+  footer{background:var(--navy);border-top:1px solid var(--line);padding:48px 0 40px;font-family:'Helvetica Neue',Arial,sans-serif}
+  .foot-grid{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+  footer .muted{color:var(--muted);font-size:13px}
+  footer a.up{color:var(--gold-soft);font-size:14px}
+
+  .js-reveal{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+  .js-reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js-reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<div class="speed-bg" aria-hidden="true">
+  <span style="top:8%;animation-duration:7s;animation-delay:0s"></span>
+  <span style="top:24%;animation-duration:9s;animation-delay:2.1s"></span>
+  <span style="top:40%;animation-duration:6.5s;animation-delay:.8s"></span>
+  <span style="top:56%;animation-duration:8.5s;animation-delay:3.2s"></span>
+  <span style="top:72%;animation-duration:7.5s;animation-delay:1.3s"></span>
+  <span style="top:88%;animation-duration:9.5s;animation-delay:4s"></span>
+</div>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html">
+      <span class="mark"><svg viewBox="0 0 100 100" width="40" height="40" aria-hidden="true"><polygon points="50,12 88,86 12,86" fill="none" stroke="#c9a227" stroke-width="7" stroke-linejoin="round"/><polygon points="50,42 66,72 34,72" fill="#c9a227"/></svg></span>
+      <div><b>AKKAD STUDIO</b><span>WEB &amp; DIGITAL DESIGN</span></div>
+    </a>
+    <nav class="links">
+      <a href="#work">Our work</a>
+      <a href="#tools">Digital tools</a>
+      <a href="#plans">Care Plans</a>
+      <a href="contact.html">Start a project</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">An Akkad Empires Company</div>
+    <h1>Websites &amp; digital tools that <em>win customers</em> for small businesses.</h1>
+    <p class="sub">From a neighborhood café to a collision center, we design sites people trust — and the tools that keep them booking, buying, and coming back. Then we maintain the whole thing for you, so you can just run your business.</p>
+    <div class="hero-cta">
+      <a href="contact.html" class="btn btn-gold">Get a quote</a>
+      <a href="#work" class="btn btn-ghost">See our work</a>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="wrap stats-inner">
+    <div class="stat"><b>From $500</b><span>Custom website</span></div>
+    <div class="stat"><b>From $49/mo</b><span>Care Plan</span></div>
+    <div class="stat"><b>EN / ES</b><span>Bilingual on request</span></div>
+    <div class="stat"><b>Mobile-first</b><span>Built to convert</span></div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">What we do</div>
+      <h2>Three things, done well</h2>
+    </div>
+    <div class="grid3">
+      <div class="card"><div class="ic">🌐</div><h3>Build your website</h3><p>Clean, fast, mobile-first sites that turn visitors into customers — bilingual when your audience needs it.</p></div>
+      <div class="card"><div class="ic">🧰</div><h3>Add the right tools</h3><p>Online booking, ordering, reviews, an AI assistant — the features that actually make you money, wired into your site.</p></div>
+      <div class="card"><div class="ic">🔧</div><h3>Maintain it for you</h3><p>Hosting, updates, security, and changes handled every month on a simple Care Plan. You never touch code.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="work" class="band">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Our work</div>
+      <h2>One studio, any kind of business</h2>
+      <p>Live demos — click through and see the range. Yours would carry your name, your colors, your services.</p>
+    </div>
+    <div class="folio">
+      <a class="work" href="/demos/coffee.html" target="_blank" rel="noopener">
+        <div class="prev" style="background:linear-gradient(135deg,#c0824f,#2c2019)">☕</div>
+        <div class="meta"><div><h3>Copper Kettle</h3><div class="type">Café · Menu &amp; order-ahead</div></div><span class="go">View demo →</span></div>
+      </a>
+      <a class="work" href="/demos/plants.html" target="_blank" rel="noopener">
+        <div class="prev" style="background:linear-gradient(135deg,#5fa572,#173525)">🪴</div>
+        <div class="meta"><div><h3>Fernwood &amp; Co.</h3><div class="type">Retail · Online store</div></div><span class="go">View demo →</span></div>
+      </a>
+      <a class="work" href="/demos/salon.html" target="_blank" rel="noopener">
+        <div class="prev" style="background:linear-gradient(135deg,#c9a86a,#141210)">💇</div>
+        <div class="meta"><div><h3>Lumière</h3><div class="type">Salon · Appointment booking</div></div><span class="go">View demo →</span></div>
+      </a>
+      <a class="work" href="https://apex-adas-calibration.netlify.app" target="_blank" rel="noopener">
+        <div class="prev" style="background:linear-gradient(135deg,#2b6cb0,#0a1626)">🚗</div>
+        <div class="meta"><div><h3>APEX Calibration</h3><div class="type">Collision &amp; ADAS · Our specialty</div></div><span class="go">View demo →</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="specialty">
+  <div class="wrap">
+    <div class="specialty">
+      <div>
+        <div class="eyebrow">Our specialty</div>
+        <h3>The go-to studio for collision &amp; calibration shops</h3>
+        <p>We work in the auto collision-repair and ADAS/radar-calibration trade, so we build the exact customer experience your industry is missing — guiding a confused insurance claim all the way to a booked job at your shop. Deep niche, real understanding.</p>
+      </div>
+      <a href="https://apex-adas-calibration.netlify.app" target="_blank" rel="noopener" class="btn btn-gold" style="color:var(--navy);white-space:nowrap">See the calibration demo</a>
+    </div>
+  </div>
+</section>
+
+<section id="tools" class="band">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Digital tools</div>
+      <h2>The features that pay for themselves</h2>
+      <p>Add any of these to your site as a one-time build or roll them into a monthly Care Plan.</p>
+    </div>
+    <div class="tools">
+      <div class="tcol">
+        <h4>Get booked</h4>
+        <ul>
+          <li>Online appointment scheduling</li>
+          <li>Lead &amp; contact forms</li>
+          <li>Quote / estimate calculators</li>
+          <li>Event &amp; class sign-ups</li>
+        </ul>
+      </div>
+      <div class="tcol">
+        <h4>Sell online</h4>
+        <ul>
+          <li>Simple online store &amp; checkout</li>
+          <li>Digital menus &amp; QR codes</li>
+          <li>Gift cards</li>
+          <li>Loyalty &amp; rewards</li>
+        </ul>
+      </div>
+      <div class="tcol">
+        <h4>Grow &amp; keep customers</h4>
+        <ul>
+          <li>Google reviews funnel</li>
+          <li>Email capture &amp; newsletters</li>
+          <li>Local SEO &amp; Google profile</li>
+          <li>Simple analytics dashboard</li>
+        </ul>
+      </div>
+      <div class="tcol">
+        <h4>AI add-ons</h4>
+        <ul>
+          <li class="xsell">Website AI chat assistant — powered by Akkad Exchange</li>
+          <li class="xsell">Missed-call text-back &amp; AI receptionist — powered by Akkad Voice</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="plans">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Care Plans</div>
+      <h2>Your site, looked after every month</h2>
+      <p>A site is a one-time build. Keeping it fast, secure, and current is the relationship — and the easy way to stay ahead of competitors who set-and-forget.</p>
+    </div>
+    <div class="plans">
+      <div class="plan">
+        <div class="tier">Care · Basic</div>
+        <div class="amt">$49 <small>/ month</small></div>
+        <ul>
+          <li>Managed hosting &amp; SSL</li>
+          <li>Security, backups &amp; uptime monitoring</li>
+          <li>Small monthly content edits</li>
+          <li>Email support</li>
+        </ul>
+      </div>
+      <div class="plan feature">
+        <span class="badge">MOST POPULAR</span>
+        <div class="tier">Care · Growth</div>
+        <div class="amt">$99 <small>/ month</small></div>
+        <ul>
+          <li>Everything in Basic</li>
+          <li>One active tool (booking, reviews, or store)</li>
+          <li>Priority content updates</li>
+          <li>Monthly check-in &amp; performance note</li>
+        </ul>
+      </div>
+      <div class="plan">
+        <div class="tier">Care · Pro</div>
+        <div class="amt">$199 <small>/ month</small></div>
+        <ul>
+          <li>Everything in Growth</li>
+          <li>Multiple tools + AI add-on management</li>
+          <li>Fast-turnaround changes</li>
+          <li>Quarterly design refresh</li>
+        </ul>
+      </div>
+    </div>
+    <p class="sites-note">New site build: <b>from $500</b> one-time · 50% deposit to start · then pick a Care Plan.</p>
+  </div>
+</section>
+
+<section id="process" class="band">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">How it works</div>
+      <h2>From handshake to live site, without the runaround</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><h4>Consult &amp; deposit</h4><p>A quick call about your business and your customers. We agree on scope and take a 50% deposit to start.</p></div>
+      <div class="step"><div class="num">2</div><h4>We design &amp; build</h4><p>Copy, design, and the tools you need — built around how your customers actually buy. You review; we refine.</p></div>
+      <div class="step"><div class="num">3</div><h4>Launch &amp; look after</h4><p>We put it live on your domain and, if you want, keep it running every month on a Care Plan.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <h2>Let's build the site your business deserves.</h2>
+    <p>Tell us what you do and we'll show you what your site — and your tools — could be doing.</p>
+    <a href="contact.html" class="btn btn-gold">Get a quote</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div>
+      <a class="brand" href="index.html" style="margin-bottom:8px"><span class="mark"><svg viewBox="0 0 100 100" width="40" height="40" aria-hidden="true"><polygon points="50,12 88,86 12,86" fill="none" stroke="#c9a227" stroke-width="7" stroke-linejoin="round"/><polygon points="50,42 66,72 34,72" fill="#c9a227"/></svg></span><div><b>AKKAD STUDIO</b><span>WEB &amp; DIGITAL DESIGN</span></div></a>
+      <div class="muted">A company of Akkad Empires · © 2026 · All rights reserved.</div>
+    </div>
+    <a class="up" href="https://akkadempires.com" target="_blank" rel="noopener">Akkad Empires ↗</a>
+  </div>
+</footer>
+
+<script>
+const revealEls = document.querySelectorAll('.sec-head, .grid3, .folio, .specialty, .tools, .plans, .step, .stats-inner');
+revealEls.forEach(el => el.classList.add('js-reveal'));
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+}, { threshold: 0.12 });
+revealEls.forEach(el => io.observe(el));
+</script>
+</body>
+</html>

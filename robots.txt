@@ -1,0 +1,8 @@
+# Akkad Studio — robots.txt
+# Human and AI visitors are both welcome to read and index this site.
+# Machine-readable summary for AI agents: /llms.txt
+
+User-agent: *
+Allow: /
+
+Sitemap: https://akkadstudio.com/sitemap.xml
